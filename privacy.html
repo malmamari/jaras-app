@@ -1,0 +1,242 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>جرس — سياسة الخصوصية | Jaras Privacy Policy</title>
+<meta name="description" content="Jaras keeps your documents on your iPhone and in your own iCloud. The developer collects no data.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Readex+Pro:wght@300;400;500;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --teal: #0F6B66;
+    --teal-deep: #073F3D;
+    --brass: #E2A93B;
+    --paper: #F7F6F1;
+    --ink: #12302E;
+    --muted: #4C6563;
+    --rule: rgba(15, 107, 102, 0.16);
+    --link: #0F6B66;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --paper: #071A19;
+      --ink: #E4EEEC;
+      --muted: #9DB5B2;
+      --rule: rgba(79, 191, 174, 0.22);
+      --link: #4FBFAE;
+    }
+  }
+  :root[data-theme="dark"] {
+    --paper: #071A19;
+    --ink: #E4EEEC;
+    --muted: #9DB5B2;
+    --rule: rgba(79, 191, 174, 0.22);
+    --link: #4FBFAE;
+  }
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    margin: 0;
+    background: var(--paper);
+    color: var(--ink);
+    font-family: "Readex Pro", system-ui, -apple-system, "Segoe UI", Tahoma, sans-serif;
+    font-weight: 300;
+    font-size: 1.0625rem;
+    line-height: 1.75;
+  }
+  a { color: var(--link); text-underline-offset: 0.2em; }
+  a:focus-visible, button:focus-visible { outline: 3px solid var(--brass); outline-offset: 3px; border-radius: 4px; }
+
+  .masthead { background: var(--teal-deep); color: #F3F7F6; }
+  .masthead-inner {
+    max-width: 44rem; margin: 0 auto; padding: 1.25rem 1rem 2.75rem;
+  }
+  .bar { display: flex; align-items: center; justify-content: space-between; gap: 1rem; }
+  .home { display: inline-flex; align-items: center; gap: 0.6rem; color: inherit; text-decoration: none; font-weight: 500; }
+  .home svg { width: 2rem; height: 2rem; }
+  .switch { display: inline-flex; border: 1px solid rgba(243, 247, 246, 0.35); border-radius: 999px; padding: 3px; }
+  .switch button {
+    font: inherit; font-size: 0.875rem; font-weight: 400; color: inherit; background: none; border: 0;
+    padding: 0.3rem 0.85rem; border-radius: 999px; cursor: pointer;
+  }
+  .switch button[aria-pressed="true"] { background: var(--brass); color: var(--teal-deep); font-weight: 500; }
+  .masthead h1 {
+    margin: 2.5rem 0 0.5rem; font-weight: 700; line-height: 1.15;
+    font-size: clamp(2.25rem, 7vw, 3.25rem);
+  }
+  .masthead p { margin: 0; max-width: 34rem; color: rgba(243, 247, 246, 0.82); }
+
+  main { max-width: 44rem; margin: 0 auto; padding: 2.5rem 1rem 4rem; }
+  .gist { margin: 0 0 3rem; padding: 0; list-style: none; }
+  .gist li {
+    border-inline-start: 4px solid var(--brass);
+    padding-inline-start: 1rem; margin-bottom: 1.1rem;
+    font-size: 1.25rem; font-weight: 400; line-height: 1.55;
+  }
+  h2 { font-size: 1.2rem; font-weight: 500; margin: 2.4rem 0 0.4rem; color: var(--teal); }
+  @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) h2 { color: var(--link); } }
+  :root[data-theme="dark"] h2 { color: var(--link); }
+  p, ul { margin: 0 0 0.9rem; max-width: 38rem; }
+  main ul { padding-inline-start: 1.2rem; }
+  .updated { color: var(--muted); font-size: 0.9rem; margin-top: 3rem; padding-top: 1rem; border-top: 1px solid var(--rule); }
+  .ltr { direction: ltr; unicode-bidi: isolate; }
+
+  /* Without JavaScript both languages show; with it, only the chosen one. */
+  .js [data-lang]:not(.active) { display: none; }
+  .no-js article + article { margin-top: 4rem; padding-top: 2rem; border-top: 1px solid var(--rule); }
+</style>
+</head>
+<body class="no-js">
+<script>
+  (function () {
+    var b = document.body; b.className = "js";
+    var lang = "ar";
+    try {
+      var q = new URLSearchParams(location.search).get("lang");
+      var saved = localStorage.getItem("jaras.lang");
+      if (q === "en" || q === "ar") lang = q;
+      else if (saved === "en" || saved === "ar") lang = saved;
+      else if (!/^ar/i.test(navigator.language || "")) lang = "en";
+    } catch (e) {}
+    window.__jarasLang = lang;
+  })();
+</script>
+
+<header class="masthead">
+  <div class="masthead-inner">
+    <div class="bar">
+      <a class="home" href="./">
+        <svg viewBox="0 0 64 64" aria-hidden="true">
+          <path d="M32 8c-2 0-3.5 1.5-3.5 3.5v1.3C20.5 14.6 15 21.6 15 30v10.5L10.5 47h43L49 40.5V30c0-8.4-5.5-15.4-13.5-17.2v-1.3C35.5 9.5 34 8 32 8Z" fill="#E2A93B"/>
+          <circle cx="32" cy="52" r="5" fill="#4FBFAE"/>
+        </svg>
+        <span data-lang="ar">جرس</span><span data-lang="en">Jaras</span>
+      </a>
+      <div class="switch" role="group" aria-label="Language / اللغة">
+        <button type="button" data-set="ar" lang="ar">العربية</button>
+        <button type="button" data-set="en" lang="en">English</button>
+      </div>
+    </div>
+    <div data-lang="ar" lang="ar" dir="rtl">
+      <h1>سياسة الخصوصية</h1>
+      <p>جرس يذكّرك قبل أن تنتهي مستنداتك. وكل ما تضيفه إليه يبقى معك أنت.</p>
+    </div>
+    <div data-lang="en" lang="en" dir="ltr">
+      <h1>Privacy policy</h1>
+      <p>Jaras reminds you before your documents expire. Everything you add to it stays with you.</p>
+    </div>
+  </div>
+</header>
+
+<main>
+  <article data-lang="ar" lang="ar" dir="rtl">
+    <ul class="gist">
+      <li>لا نجمع أي بيانات عنك: لا حسابات، ولا إعلانات، ولا أدوات تحليل أو تتبّع.</li>
+      <li>تُحفظ مستنداتك على جهازك، وفي حساب iCloud الخاص بك إذا كانت المزامنة مفعّلة.</li>
+      <li>لا نستطيع، نحن مطوّري التطبيق، الاطّلاع على مستنداتك أو صورها.</li>
+    </ul>
+
+    <h2>ما تضيفه إلى جرس</h2>
+    <p>اسم المستند وفئته، واسم صاحبه، ورقمه، وتاريخ انتهائه، وملاحظاتك، ومواعيد التذكير التي تختارها، وسجلّ التجديد، وصور المستند التي تمسحها أو تختارها. تُحفظ هذه المعلومات على جهازك ولا تُرسل إلينا ولا إلى أي جهة أخرى.</p>
+
+    <h2>مزامنة iCloud</h2>
+    <p>المزامنة مفعّلة افتراضيًا، ويمكنك إيقافها من شاشة «الحساب». عند تفعيلها تُحفظ نسخة من مستنداتك وصورها في قاعدة بياناتك الخاصة على iCloud عبر خدمة CloudKit من Apple، فتظهر على أجهزتك المسجّلة بنفس حساب Apple. لا يصل إليها أحد غيرك، ونحن كذلك. تخضع هذه البيانات <a href="https://www.apple.com/legal/privacy/" rel="noopener">لسياسة خصوصية Apple</a>، وتُحتسب من مساحة iCloud الخاصة بك.</p>
+
+    <h2>الكاميرا والصور</h2>
+    <p>يطلب جرس إذن الكاميرا لمسح المستندات، وإذن الصور لاستيراد الصور التي تختارها أنت فقط. قراءة النص من صور المستندات تتمّ على جهازك باستخدام تقنيات Apple، ولا تُرسل الصور إلى أي خادم.</p>
+
+    <h2>قفل التطبيق</h2>
+    <p>عند تفعيل القفل يستخدم جرس Face ID أو Touch ID أو رمز الجهاز عبر نظام iOS. لا يرى التطبيق بياناتك الحيوية ولا يخزّنها.</p>
+
+    <h2>التذكيرات والأداة</h2>
+    <p>تُجدول التذكيرات على جهازك نفسه، وتظهر فيها أسماء مستنداتك. وتعرض أداة الشاشة الرئيسية وشاشة القفل أقرب المستندات انتهاءً. يمكنك التحكم في ظهور الإشعارات ومعاينتها من إعدادات iPhone، واختيار عدم إضافة الأداة.</p>
+
+    <h2>التقويم والمشاركة</h2>
+    <p>عند إضافة تاريخ انتهاء إلى التقويم تظهر شاشة iOS المعتادة، ولا يُحفظ إلا ما تؤكّده أنت. لا يقرأ جرس تقويمك. وعند مشاركة مستند أو تصدير المواعيد، أنت من يختار الوجهة.</p>
+
+    <h2>النسخ الاحتياطي</h2>
+    <p>ملف النسخة الاحتياطية تنشئه أنت وتحفظه حيث تشاء. يحتوي على مستنداتك وصورها دون تشفير، لذا احفظه في مكان آمن ولا تشاركه مع أحد.</p>
+
+    <h2>حذف بياناتك</h2>
+    <p>احذف أي مستند من داخل التطبيق، وإذا كانت المزامنة مفعّلة يُحذف من iCloud أيضًا. حذف التطبيق يزيل بياناته من جهازك. ويمكنك حذف بيانات جرس من iCloud عبر الإعدادات ← اسمك ← iCloud ← إدارة التخزين.</p>
+
+    <h2>الأطفال</h2>
+    <p>جرس غير موجّه للأطفال، ولا يجمع بيانات من أي شخص.</p>
+
+    <h2>تحديث هذه السياسة</h2>
+    <p>إذا تغيّر شيء في طريقة تعامل جرس مع بياناتك، سننشر النسخة الجديدة في هذه الصفحة مع تاريخ التحديث.</p>
+
+    <h2>تواصل معنا</h2>
+    <p>لأي سؤال عن الخصوصية: <a class="ltr" href="mailto:almamarideveloper@gmail.com">almamarideveloper@gmail.com</a></p>
+
+    <p class="updated">آخر تحديث: 18 أكتوبر 2026</p>
+  </article>
+
+  <article data-lang="en" lang="en" dir="ltr">
+    <ul class="gist">
+      <li>We collect no data about you: no accounts, no ads, no analytics or tracking.</li>
+      <li>Your documents are stored on your device, and in your own iCloud if sync is on.</li>
+      <li>We, the developer, can't see your documents or their scans.</li>
+    </ul>
+
+    <h2>What you add to Jaras</h2>
+    <p>A document's name and category, the owner's name, the document number, its expiry date, your notes, the reminders you choose, renewal history, and the scans or photos you add. This information is stored on your device and is never sent to us or to anyone else.</p>
+
+    <h2>iCloud sync</h2>
+    <p>Sync is on by default, and you can turn it off in Account. When it's on, a copy of your documents and scans is kept in your private iCloud database through Apple's CloudKit, so they appear on your devices signed in to the same Apple Account. Nobody else can reach it, including us. This data is covered by <a href="https://www.apple.com/legal/privacy/" rel="noopener">Apple's privacy policy</a> and uses your own iCloud storage.</p>
+
+    <h2>Camera and photos</h2>
+    <p>Jaras asks for the camera to scan documents, and for photos to import only the images you pick. Reading text from scans happens on your device with Apple's technology. Images are never uploaded to a server.</p>
+
+    <h2>App lock</h2>
+    <p>When app lock is on, Jaras uses Face ID, Touch ID or your device passcode through iOS. The app never sees or stores your biometric data.</p>
+
+    <h2>Reminders and the widget</h2>
+    <p>Reminders are scheduled on your device and show your document names. The Home Screen and Lock Screen widget shows the documents expiring soonest. You can control notifications and their previews in iPhone Settings, and you don't have to add the widget.</p>
+
+    <h2>Calendar and sharing</h2>
+    <p>When you add an expiry date to your calendar, the standard iOS screen opens and only what you confirm is saved. Jaras doesn't read your calendar. When you share a document or export dates, you choose where they go.</p>
+
+    <h2>Backups</h2>
+    <p>You create backup files yourself and choose where to save them. A backup contains your documents and scans without encryption, so keep it somewhere safe and don't share it.</p>
+
+    <h2>Deleting your data</h2>
+    <p>Delete any document inside the app; if sync is on, it's removed from iCloud too. Deleting the app removes its data from your device. To remove Jaras data from iCloud, go to Settings → your name → iCloud → Manage Storage.</p>
+
+    <h2>Children</h2>
+    <p>Jaras isn't directed at children and collects no data from anyone.</p>
+
+    <h2>Changes to this policy</h2>
+    <p>If anything changes in how Jaras handles your data, we'll publish the new version on this page with its date.</p>
+
+    <h2>Contact</h2>
+    <p>For any privacy question: <a href="mailto:almamarideveloper@gmail.com">almamarideveloper@gmail.com</a></p>
+
+    <p class="updated">Last updated: 18 October 2026</p>
+  </article>
+</main>
+
+<script>
+  (function () {
+    var html = document.documentElement;
+    function setLang(lang) {
+      html.lang = lang; html.dir = lang === "ar" ? "rtl" : "ltr";
+      document.querySelectorAll("[data-lang]").forEach(function (el) {
+        el.classList.toggle("active", el.getAttribute("data-lang") === lang);
+      });
+      document.querySelectorAll("[data-set]").forEach(function (btn) {
+        btn.setAttribute("aria-pressed", String(btn.getAttribute("data-set") === lang));
+      });
+      document.title = lang === "ar" ? "جرس — سياسة الخصوصية" : "Jaras — Privacy policy";
+      try { localStorage.setItem("jaras.lang", lang); } catch (e) {}
+    }
+    document.querySelectorAll("[data-set]").forEach(function (btn) {
+      btn.addEventListener("click", function () { setLang(btn.getAttribute("data-set")); });
+    });
+    setLang(window.__jarasLang || "ar");
+  })();
+</script>
+</body>
+</html>

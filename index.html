@@ -1,0 +1,198 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>جرس — الدعم | Jaras Support</title>
+<meta name="description" content="Help and contact for Jaras, the document expiry reminder app for iPhone.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Readex+Pro:wght@300;400;500;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --teal: #0F6B66;
+    --teal-deep: #073F3D;
+    --brass: #E2A93B;
+    --paper: #F7F6F1;
+    --ink: #12302E;
+    --muted: #4C6563;
+    --rule: rgba(15, 107, 102, 0.16);
+    --link: #0F6B66;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --paper: #071A19;
+      --ink: #E4EEEC;
+      --muted: #9DB5B2;
+      --rule: rgba(79, 191, 174, 0.22);
+      --link: #4FBFAE;
+    }
+  }
+  :root[data-theme="dark"] {
+    --paper: #071A19;
+    --ink: #E4EEEC;
+    --muted: #9DB5B2;
+    --rule: rgba(79, 191, 174, 0.22);
+    --link: #4FBFAE;
+  }
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    margin: 0;
+    background: var(--paper);
+    color: var(--ink);
+    font-family: "Readex Pro", system-ui, -apple-system, "Segoe UI", Tahoma, sans-serif;
+    font-weight: 300;
+    font-size: 1.0625rem;
+    line-height: 1.75;
+  }
+  a { color: var(--link); text-underline-offset: 0.2em; }
+  a:focus-visible, button:focus-visible { outline: 3px solid var(--brass); outline-offset: 3px; border-radius: 4px; }
+
+  .masthead { background: var(--teal-deep); color: #F3F7F6; }
+  .masthead-inner {
+    max-width: 44rem; margin: 0 auto; padding: 1.25rem 1rem 2.75rem;
+  }
+  .bar { display: flex; align-items: center; justify-content: space-between; gap: 1rem; }
+  .home { display: inline-flex; align-items: center; gap: 0.6rem; color: inherit; text-decoration: none; font-weight: 500; }
+  .home svg { width: 2rem; height: 2rem; }
+  .switch { display: inline-flex; border: 1px solid rgba(243, 247, 246, 0.35); border-radius: 999px; padding: 3px; }
+  .switch button {
+    font: inherit; font-size: 0.875rem; font-weight: 400; color: inherit; background: none; border: 0;
+    padding: 0.3rem 0.85rem; border-radius: 999px; cursor: pointer;
+  }
+  .switch button[aria-pressed="true"] { background: var(--brass); color: var(--teal-deep); font-weight: 500; }
+  .masthead h1 {
+    margin: 2.5rem 0 0.5rem; font-weight: 700; line-height: 1.15;
+    font-size: clamp(2.25rem, 7vw, 3.25rem);
+  }
+  .masthead p { margin: 0; max-width: 34rem; color: rgba(243, 247, 246, 0.82); }
+
+  main { max-width: 44rem; margin: 0 auto; padding: 2.5rem 1rem 4rem; }
+  .gist { margin: 0 0 3rem; padding: 0; list-style: none; }
+  .gist li {
+    border-inline-start: 4px solid var(--brass);
+    padding-inline-start: 1rem; margin-bottom: 1.1rem;
+    font-size: 1.25rem; font-weight: 400; line-height: 1.55;
+  }
+  h2 { font-size: 1.2rem; font-weight: 500; margin: 2.4rem 0 0.4rem; color: var(--teal); }
+  @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) h2 { color: var(--link); } }
+  :root[data-theme="dark"] h2 { color: var(--link); }
+  p, ul { margin: 0 0 0.9rem; max-width: 38rem; }
+  main ul { padding-inline-start: 1.2rem; }
+  .updated { color: var(--muted); font-size: 0.9rem; margin-top: 3rem; padding-top: 1rem; border-top: 1px solid var(--rule); }
+  .ltr { direction: ltr; unicode-bidi: isolate; }
+
+  /* Without JavaScript both languages show; with it, only the chosen one. */
+  .js [data-lang]:not(.active) { display: none; }
+  .no-js article + article { margin-top: 4rem; padding-top: 2rem; border-top: 1px solid var(--rule); }
+</style>
+</head>
+<body class="no-js">
+<script>
+  (function () {
+    var b = document.body; b.className = "js";
+    var lang = "ar";
+    try {
+      var q = new URLSearchParams(location.search).get("lang");
+      var saved = localStorage.getItem("jaras.lang");
+      if (q === "en" || q === "ar") lang = q;
+      else if (saved === "en" || saved === "ar") lang = saved;
+      else if (!/^ar/i.test(navigator.language || "")) lang = "en";
+    } catch (e) {}
+    window.__jarasLang = lang;
+  })();
+</script>
+
+<header class="masthead">
+  <div class="masthead-inner">
+    <div class="bar">
+      <a class="home" href="./">
+        <svg viewBox="0 0 64 64" aria-hidden="true">
+          <path d="M32 8c-2 0-3.5 1.5-3.5 3.5v1.3C20.5 14.6 15 21.6 15 30v10.5L10.5 47h43L49 40.5V30c0-8.4-5.5-15.4-13.5-17.2v-1.3C35.5 9.5 34 8 32 8Z" fill="#E2A93B"/>
+          <circle cx="32" cy="52" r="5" fill="#4FBFAE"/>
+        </svg>
+        <span data-lang="ar">جرس</span><span data-lang="en">Jaras</span>
+      </a>
+      <div class="switch" role="group" aria-label="Language / اللغة">
+        <button type="button" data-set="ar" lang="ar">العربية</button>
+        <button type="button" data-set="en" lang="en">English</button>
+      </div>
+    </div>
+    <div data-lang="ar" lang="ar" dir="rtl">
+      <h1>مساعدة جرس</h1>
+      <p>جرس يذكّرك بمواعيد انتهاء جوازك وبطاقتك ورخصتك وملكية مركبتك، قبل أن يفوت الأوان.</p>
+    </div>
+    <div data-lang="en" lang="en" dir="ltr">
+      <h1>Jaras help</h1>
+      <p>Jaras reminds you before your passport, ID, license or vehicle registration expires.</p>
+    </div>
+  </div>
+</header>
+
+<main>
+  <article data-lang="ar" lang="ar" dir="rtl">
+    <ul class="gist">
+      <li>لأي سؤال أو مشكلة، اكتب لنا على <a class="ltr" href="mailto:almamarideveloper@gmail.com">almamarideveloper@gmail.com</a></li>
+    </ul>
+
+    <h2>التذكيرات لا تصل</h2>
+    <p>تأكّد من السماح بالإشعارات في الإعدادات ← الإشعارات ← جرس. وافتح التطبيق بين حين وآخر ليجدول التذكيرات القادمة، فنظام iOS يسمح بعدد محدود من التذكيرات المجدولة لكل تطبيق.</p>
+
+    <h2>المستندات لا تظهر على جهازي الآخر</h2>
+    <p>استخدم حساب Apple نفسه على الجهازين، وتأكّد من تفعيل iCloud، ومن تفعيل «مزامنة iCloud» في شاشة «الحساب» داخل جرس. قد تستغرق المزامنة بضع دقائق.</p>
+
+    <h2>الانتقال إلى iPhone جديد</h2>
+    <p>إذا كانت المزامنة مفعّلة، تظهر مستنداتك تلقائيًا بعد تسجيل الدخول بحساب Apple نفسه. ويمكنك أيضًا إنشاء نسخة احتياطية من شاشة «الحساب» واستعادتها على الجهاز الجديد.</p>
+
+    <h2>قراءة البيانات من الصور</h2>
+    <p>عند مسح مستند يقترح جرس الاسم والرقم وتاريخ الانتهاء. راجع الاقتراحات قبل الحفظ، فقد تختلف الدقّة حسب وضوح الصورة.</p>
+
+    <h2>الخصوصية</h2>
+    <p>تبقى مستنداتك على جهازك وفي حساب iCloud الخاص بك، ولا نجمع أي بيانات. اقرأ <a href="privacy.html?lang=ar">سياسة الخصوصية</a>.</p>
+  </article>
+
+  <article data-lang="en" lang="en" dir="ltr">
+    <ul class="gist">
+      <li>For any question or problem, write to <a href="mailto:almamarideveloper@gmail.com">almamarideveloper@gmail.com</a></li>
+    </ul>
+
+    <h2>Reminders aren't arriving</h2>
+    <p>Check that notifications are allowed in Settings → Notifications → Jaras. Open the app now and then so it can schedule upcoming reminders: iOS limits how many reminders each app can schedule ahead.</p>
+
+    <h2>Documents don't appear on my other device</h2>
+    <p>Use the same Apple Account on both devices, make sure iCloud is on, and check that iCloud sync is on in Jaras's Account screen. Syncing can take a few minutes.</p>
+
+    <h2>Moving to a new iPhone</h2>
+    <p>With sync on, your documents appear on their own once you sign in with the same Apple Account. You can also create a backup from Account and restore it on the new iPhone.</p>
+
+    <h2>Reading details from scans</h2>
+    <p>When you scan a document, Jaras suggests its name, number and expiry date. Check the suggestions before saving, as accuracy depends on how clear the scan is.</p>
+
+    <h2>Privacy</h2>
+    <p>Your documents stay on your device and in your own iCloud, and we collect no data. Read the <a href="privacy.html?lang=en">privacy policy</a>.</p>
+  </article>
+</main>
+
+<script>
+  (function () {
+    var html = document.documentElement;
+    function setLang(lang) {
+      html.lang = lang; html.dir = lang === "ar" ? "rtl" : "ltr";
+      document.querySelectorAll("[data-lang]").forEach(function (el) {
+        el.classList.toggle("active", el.getAttribute("data-lang") === lang);
+      });
+      document.querySelectorAll("[data-set]").forEach(function (btn) {
+        btn.setAttribute("aria-pressed", String(btn.getAttribute("data-set") === lang));
+      });
+      document.title = lang === "ar" ? "جرس — الدعم" : "Jaras — Support";
+      try { localStorage.setItem("jaras.lang", lang); } catch (e) {}
+    }
+    document.querySelectorAll("[data-set]").forEach(function (btn) {
+      btn.addEventListener("click", function () { setLang(btn.getAttribute("data-set")); });
+    });
+    setLang(window.__jarasLang || "ar");
+  })();
+</script>
+</body>
+</html>
